@@ -30,3 +30,18 @@ def delete_nth(array, n):
             counts[i] += 1
 
     return result
+
+def delete_nth1(array,n):
+    d={}
+    result=[]
+    for i in array:
+        
+        if i in d:
+            if(d[i]==1):
+                d[i]+=1
+                result.append(i)
+        else:
+            d[i]=1
+            result.append(i)
+    return result
+print(delete_nth1([1,2,3,1,2,1,2,3],2))
